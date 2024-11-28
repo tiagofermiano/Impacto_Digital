@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impacto Digital</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header>
+      <h1>Impacto Digital</h1>
+      <nav>
+        <button @click="currentPage = 'home'">Home</button>
+        <button @click="currentPage = 'about'">Sobre</button>
+        <button @click="currentPage = 'contact'">Contato</button>
+      </nav>
+    </header>
+
+    <!-- Dynamic Component -->
+    <component :is="currentPage"></component>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Impacto Digital - Todos os direitos reservados.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
